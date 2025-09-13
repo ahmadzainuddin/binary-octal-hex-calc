@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Routes, Route } from 'react-router-dom'
+import { NavLink, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import BinaryPage from './pages/BinaryPage.jsx'
 import OctalPage from './pages/OctalPage.jsx'
@@ -19,7 +19,7 @@ export default function App() {
       </header>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/binary" element={<BinaryPage />} />
         <Route path="/octal" element={<OctalPage />} />
         <Route path="/hex" element={<HexPage />} />
